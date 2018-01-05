@@ -5,7 +5,7 @@ end
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundleFetch 'Shougo/neobundle.vim' 
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'kien/ctrlp.vim'
@@ -44,9 +44,22 @@ noremap <silent> <leader>j :%!python -m json.tool<CR>:set ft=javascript<CR>
 "Map \x to full-file XML formatting macro
 noremap <silent> <leader>x O<ESC>ggVGgJ:s/> *</>\r</g<CR>:se ft=xml<CR>gg=G
 
+"" Tab complete menu
+set wildchar=<Tab> wildmenu wildmode=full
+
+"" F5 buffer switching
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"" F6 buffer tabbing
+set wildcharm=<C-z>
+nnoremap <F6> :buffer <C-z><S-Tab>
+
+""Map \q to delete the current buffer
+noremap <silent> <leader>q :bd<CR>
+
 "Map to edit and reload .vimrc
 noremap <C-E><C-V> :sp $MYVIMRC<CR>
-noremap <C-E><C-R> :source $MYVIMRC<CR> 
+noremap <C-E><C-R> :source $MYVIMRC<CR>
 
 "Simplify split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -74,7 +87,7 @@ set nowrap
 set autoindent
 
 "Set font/size
-set guifont=Monaco:h16 
+set guifont=Monaco:h16
 "Show line numbers
 set number
 
