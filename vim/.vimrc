@@ -11,10 +11,8 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'tpope/vim-fugitive'
 
 NeoBundleCheck
 
