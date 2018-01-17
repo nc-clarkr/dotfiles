@@ -19,6 +19,10 @@ NeoBundleCheck
 call neobundle#end()
 
 
+" Leader
+let mapleader=" "
+
+
 "" NERDTree
 
 "Map \r to reveal in NERDTree
