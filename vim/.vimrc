@@ -60,10 +60,10 @@ nnoremap <F6> :buffer <C-z><S-Tab>
 
 ""Map \q to delete the current buffer
 noremap <silent> <leader>q :bd<CR>
+"Map <F2> to edit and <F3> to reload .vimrc
+noremap <F2> :sp $MYVIMRC<CR>
+noremap <F3> :source $MYVIMRC<CR>
 
-"Map to edit and reload .vimrc
-noremap <C-E><C-V> :sp $MYVIMRC<CR>
-noremap <C-E><C-R> :source $MYVIMRC<CR>
 
 "Simplify split navigation
 nnoremap <C-J> <C-W><C-J>
