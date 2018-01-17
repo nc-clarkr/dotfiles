@@ -124,6 +124,11 @@ set background=dark
 
 "Detect filetype and indent accordingly
 filetype plugin indent on
+
+" Make it obvious where 100 characters is
+set textwidth=100
+set colorcolumn=+1
+
 " vim-test bindings
 nnoremap <silent> t<C-n> :TestNearest<CR>
 nnoremap <silent> t<C-f> :TestFile<CR>
