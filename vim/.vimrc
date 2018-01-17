@@ -13,6 +13,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle'janko-m/vim-test'
+NeoBundle 'tpope/vim-dispatch'
 
 NeoBundleCheck
 
@@ -121,3 +123,12 @@ set background=dark
 
 "Detect filetype and indent accordingly
 filetype plugin indent on
+" vim-test bindings
+nnoremap <silent> t<C-n> :TestNearest<CR>
+nnoremap <silent> t<C-f> :TestFile<CR>
+nnoremap <silent> t<C-s> :TestSuite<CR>
+nnoremap <silent> t<C-l> :TestLast<CR>
+nnoremap <silent> t<C-g> :TestVisit<CR>
+
+" Run tests using dispatch strategy
+let test#strategy = "dispatch"
