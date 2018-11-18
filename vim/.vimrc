@@ -162,7 +162,9 @@ nnoremap <silent> t<C-l> :TestLast<CR>
 nnoremap <silent> t<C-g> :TestVisit<CR>
 
 " Run tests using dispatch strategy
-let test#strategy = "dispatch"
+let test#strategy = 'dispatch'
+" Run rspec tests using spring
+let test#ruby#rspec#executable = 'spring rspec'
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
