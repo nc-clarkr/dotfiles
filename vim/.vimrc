@@ -33,6 +33,8 @@ nmap <silent> <leader>r :NERDTreeFind<CR>
 "Map \n to toggle NERDTree
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 
+let NERDTreeShowHidden=1
+
 
 "" Ack
 
@@ -44,6 +46,7 @@ nmap <leader>a :Ack <C-R><C-W><CR>
 
 "Map \j to a full-file JSON object formatting macro
 noremap <silent> <leader>j :%!python -m json.tool<CR>:set ft=javascript<CR>
+
 
 "Map \x to full-file XML formatting macro
 noremap <silent> <leader>x O<ESC>ggVGgJ:s/> *</>\r</g<CR>:se ft=xml<CR>gg=G
