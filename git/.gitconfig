@@ -1,0 +1,24 @@
+[pull]
+  rebase = true
+[push]
+  default = upstream
+[merge]
+  tool = vimdiff
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  s  = status
+  br = branch
+  b  = branch
+  d  = diff
+  ds = diff --staged
+  ln = log --name-status
+  l  = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+  la = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all --graph
+  a  = add
+  cp = cherry-pick
