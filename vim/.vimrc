@@ -138,12 +138,14 @@ endif
 " Turn ruler on to show character position
 set ruler
 
-" Solarized
+" Use Solarized
 colorscheme solarized
+" Solarized dark
+set background=dark
+
 
 " Support syntax highlighting in terminal vim
 syntax on
-set background=dark
 
 " Detect filetype and indent accordingly
 filetype plugin indent on
