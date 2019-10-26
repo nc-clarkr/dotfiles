@@ -66,16 +66,18 @@ let test#ruby#rspec#executable = 'spring rspec'
 
 
 """""""""""
-"" Other 
+"" Other
 """""""""""
 
 " Map leader to space
 let mapleader=" "
 
 " Map \j to a full-file JSON object formatting macro
-noremap <silent> <leader>j :%!python -m json.tool<CR>:set ft=javascript<CR>
+noremap <silent> <leader>j :%!python -m json.tool<CR>:set ft=json<CR>
+
 " Map \x to full-file XML formatting macro
 noremap <silent> <leader>x O<ESC>ggVGgJ:s/> *</>\r</g<CR>:se ft=xml<CR>gg=G
+
 " Map \q to delete the current buffer
 noremap <silent> <leader>q :bd!<CR>
 
