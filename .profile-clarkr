@@ -1,0 +1,19 @@
+if [ -f ~/.git-completion.sh ]; then
+  . ~/.git-completion.sh
+fi
+
+if [ -f ~/.git-branch-prompt.sh ]; then
+  . ~/.git-branch-prompt.sh
+fi
+
+# Environment variables
+export EDITOR=vim
+export RAILS_CONSOLE=pry
+
+# Helpful aliases
+alias be="bundle exec"
+alias w='cd ~/code'
+alias updatedb='sudo /usr/libexec/locate.updatedb'
+
+# prevent ctrl + d from closing tab without warning
+IGNOREEOF=10
