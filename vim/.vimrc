@@ -1,69 +1,41 @@
-if has('vim_starting')
-  set nocompatible
-  set rtp+=~/.vim/bundle/neobundle.vim/
-end
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath+=/Users/robertclark/.cache/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Required:
+if dein#load_state('/Users/robertclark/.cache/dein')
+  call dein#begin('/Users/robertclark/.cache/dein')
 
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle'janko-m/vim-test'
-NeoBundle 'tpope/vim-dispatch'
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/robertclark/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-NeoBundleCheck
+  " Add or remove your plugins here like this:
+  call dein#add('mileszs/ack.vim')
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('tpope/vim-surround')
 
-call neobundle#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
-"""""""""
-"" Ack
-"""""""""
+" Required:
+filetype plugin indent on
+syntax enable
 
-" Map \a to Ack current word
-nmap <leader>a :Ack <C-R><C-W><CR>
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
-"""""""""
-"" CtrlP
-"""""""""
-
-" Set ctrlp exclusions - if it isn't working, run :ClearAllCtrlPCaches
-let g:ctrlp_custom_ignore = 'bower_components/\|node_modules/\|dist/'
-
-""""""""""""""
-"" NERDTree
-""""""""""""""
-
-" Map \r to reveal in NERDTree
-nmap <silent> <leader>r :NERDTreeFind<CR>
-
-" Map \n to toggle NERDTree
-nmap <silent> <leader>n :NERDTreeToggle<CR>
-
-" Show hidden files in NERDTree
-let NERDTreeShowHidden=1
-
-"""""""""""""
-" vim-test
-"""""""""""""
-
-" Helpful bindings
-nnoremap <silent> t<C-n> :TestNearest<CR>
-nnoremap <silent> t<C-f> :TestFile<CR>
-nnoremap <silent> t<C-s> :TestSuite<CR>
-nnoremap <silent> t<C-l> :TestLast<CR>
-nnoremap <silent> t<C-g> :TestVisit<CR>
-
-" Run tests using dispatch strategy
-let test#strategy = 'dispatch'
-
-" Run rspec tests using spring
-let test#ruby#rspec#executable = 'spring rspec'
-
+"End dein Scripts-------------------------
 
 """""""""""
 "" Other
@@ -143,7 +115,6 @@ colorscheme solarized
 " Solarized dark
 set background=dark
 
-
 " Support syntax highlighting in terminal vim
 syntax on
 
@@ -181,3 +152,29 @@ nnoremap <Left> :echoe 'Use h'<CR>
 nnoremap <Right> :echoe 'Use l'<CR>
 nnoremap <Up> :echoe 'Use k'<CR>
 nnoremap <Down> :echoe 'Use j'<CR>
+"""""""""
+"" Ack
+"""""""""
+
+" Map \a to Ack current word
+nmap <leader>a :Ack <C-R><C-W><CR>
+
+"""""""""
+"" CtrlP
+"""""""""
+
+" Set ctrlp exclusions - if it isn't working, run :ClearAllCtrlPCaches
+let g:ctrlp_custom_ignore = 'bower_components/\|node_modules/\|dist/'
+
+""""""""""""""
+"" NERDTree
+""""""""""""""
+
+" Map \r to reveal in NERDTree
+nmap <silent> <leader>r :NERDTreeFind<CR>
+
+" Map \n to toggle NERDTree
+nmap <silent> <leader>n :NERDTreeToggle<CR>
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
