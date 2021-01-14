@@ -190,10 +190,18 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-
 """"""""""""""
 "" vim-ruby
 """"""""""""""
 
 let g:ruby_indent_assignment_style = 'variable'
 let g:ruby_indent_hanging_elements = 0
+
+
+""""""""""""""
+"" disable the bell when using macvim
+""""""""""""""
+set noerrorbells
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
