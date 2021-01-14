@@ -20,6 +20,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('tpope/vim-surround')
+  call dein#add('vim-syntastic/syntastic')
 
   " Required:
   call dein#end()
@@ -178,3 +179,12 @@ nmap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
+
+
+""""""""""""""
+"" Syntastic
+""""""""""""""
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
