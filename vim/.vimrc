@@ -21,6 +21,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-syntastic/syntastic')
+  call dein#add('vim-ruby/vim-ruby')
 
   " Required:
   call dein#end()
@@ -188,3 +189,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+""""""""""""""
+"" vim-ruby
+""""""""""""""
+
+let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_hanging_elements = 0
