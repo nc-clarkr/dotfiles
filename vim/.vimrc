@@ -22,6 +22,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-syntastic/syntastic')
   call dein#add('vim-ruby/vim-ruby')
+  call dein#add('hashivim/vim-terraform')
 
   " Required:
   call dein#end()
@@ -205,3 +206,9 @@ set noerrorbells
 set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
+
+
+""""""""""""""
+"" Terraform
+""""""""""""""
+let g:terraform_fmt_on_save=1
